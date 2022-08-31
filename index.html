@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+
+    <title>Responsive Website</title>
+</head>
+<body>
+    <!--=========================== HEADER ============================!-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Shop
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19z"/></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.9 2.1l9.899 1.415 1.414 9.9-9.192 9.192a1 1 0 0 1-1.414 0l-9.9-9.9a1 1 0 0 1 0-1.414L10.9 2.1zm.707 2.122L3.828 12l8.486 8.485 7.778-7.778-1.06-7.425-7.425-1.06zm2.12 6.364a2 2 0 1 1 2.83-2.829 2 2 0 0 1-2.83 2.829z"/></svg>
+                            <span>New</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#collection" class="nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 4.126V2h2v2.126a4.002 4.002 0 0 1 1.803 6.728l6.063 10.502-1.732 1-6.063-10.501a4.004 4.004 0 0 1-2.142 0L4.866 22.356l-1.732-1 6.063-10.502A4.002 4.002 0 0 1 11 4.126zM12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#product" class="nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9 3a3 3 0 0 0 6 0h6a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2.001L19 20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1l-.001-8.001L3 12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6zm11 1.999h-3.417l-.017.041a5.002 5.002 0 0 1-4.35 2.955L12 8a5.001 5.001 0 0 1-4.566-2.96L7.416 5H4v5l2.999-.001V19H17l-.001-9L20 9.999v-5z"/></svg>
+                            <span>Products</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Theme change button -->
+            <span class="theme-changer">
+                <svg id="moon-button" class="change-theme active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"/></svg>
+                <svg id="sun-button"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>
+            </span>
+        </nav>
+    </header>
+
+    <!--=========================== MAIN ==============================!-->
+    <main class="main">
+        <!--======================== HOME ===========================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        New Clothing <br>
+                        Collection
+                    </h1>
+
+                    <p class="home__description">
+                        The new collection of clothing from <br>
+                        the best brands this year
+                    </p>
+                    <a href="#new" class="button__link arrow__link">Explore <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></a>
+                </div>
+          
+
+                <div class="home__images">
+                    <img src="/img/home1.png" alt="pic 1">
+                    <img src="/img/home2.png" alt="pic 2">
+                </div>
+        </div>
+        </section>
+        <!--======================== NEW ===========================-->
+        <section class="new section" id="new">
+            <h2 class="section__title">
+                New Categories
+            </h2>
+            <div class="new__container container grid">
+                <article class="new__card">
+                    <img src="/img/new1.png" alt="new image 1" class="new__img">
+                    <a href="#" class="new__link">
+                        <div class="new__data">
+                            <h2 class="new__title">Hoodie & Sweatshirt</h2>
+                            <span class="new__subtitle">Winter Collection</span>
+                        </div>
+                        <svg class="arrow__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                    </a>
+                </article>
+
+                <article class="new__card">
+                    <img src="/img/new2.png" alt="new image 1" class="new__img">
+                    <a href="#" class="new__link">
+                        <div class="new__data">
+                            <h2 class="new__title">Coats & Coat Sets</h2>
+                            <span class="new__subtitle">Winter Collection</span>
+                        </div>
+                        <svg class="arrow__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                    </a>
+                </article>
+
+                <article class="new__card">
+                    <img src="/img/new3.png" alt="new image 1" class="new__img">
+                    <a href="#" class="new__link">
+                        <div class="new__data">
+                            <h2 class="new__title">Pants & Jackets</h2>
+                            <span class="new__subtitle">Winter Collection</span>
+                        </div>
+                        <svg class="arrow__link" xmlns="http://www.w3.org/2000/svg" class="arrow__link" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                    </a>
+                </article>
+            </div>
+            
+        </section>
+
+        <!--===================== COLLECTIONS ======================-->
+        <section class="collection section" id="collection">
+            <div class="collection__container container">
+                <div class="collection__explore">
+                    <div class="collection__data-men">
+                        <h2 class="collection__title">
+                            Men <br>
+                            Collection
+                        </h2>
+                        <a href="#" class="arrow__link button__link">Explore Clothes
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                        </a>
+                    </div>
+                    <img src="/img/collection1.png" alt="collection image">
+                </div>
+                <div class="collection__explore">
+                    <img src="/img/collection2.png" alt="collection image">
+                    <div class="collection__data-women">
+                        <h2 class="collection__title">
+                            Women <br>
+                            Collection
+                        </h2>
+                        <a href="#" class="button__link">Explore Clothes
+                            <svg class="arrow__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!--====================== PRODUCTS ========================-->
+        <section class="product section" id="product">
+            <h2 class="section__title">
+                Best Products
+            </h2>
+
+            <div class="product__container container slideshow">
+               
+                <div class="slides">
+                    <article class="products__card slide active">
+                        <img src="/img/product1.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                Gotland black Jacket
+                            </h2>
+                            <span class="products__price">
+                                $124.99
+                            </span> 
+                        </div>
+                    </article>
+
+                    <article class="products__card slide active">
+                        <img src="/img/product2.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                Black Sports Shorts
+                            </h2>
+                            <span class="products__price">
+                                $34.99
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="products__card slide">
+                        <img src="/img/product3.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                Knox Quilted Jacket
+                            </h2>
+                            <span class="products__price">
+                                $97.99
+                            </span>
+                        </div>
+                    </article>
+                    <article class="products__card slide">
+                        <img src="/img/new1.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                White clothes
+                            </h2>
+                            <span class="products__price">
+                                $34.99
+                            </span>
+                        </div>
+                    </article>
+                    <article class="products__card slide">
+                        <img src="/img/new2.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                Curly hair
+                            </h2>
+                            <span class="products__price">
+                                $34.99
+                            </span>
+                        </div>
+                    </article>
+                    <article class="products__card slide">
+                        <img src="/img/new3.png" alt="" class="product__img">
+                        <div class="product__info">
+                            <h2 class="products__title">
+                                Black jacket
+                            </h2>
+                            <span class="products__price">
+                                $34.99
+                            </span>
+                        </div>
+                    </article> 
+
+                </div>
+
+                
+
+            </div>
+            <div class="slideshow-container">
+                <span class="prev">&#10094;</span>  
+                <div class="other-products">
+    
+                </div>
+                <span class="next">&#10095;</span>
+            </div>
+
+        </section>
+
+        <!--=========================== BRANDS ===============================-->
+        <section class="brand section" id="brand">
+            <h2 class="section__title">
+                Brands We Sell
+            </h2>
+            <div class="brand__container container grid">
+                <img class="brand__img" src="/img/logo1.png" alt="logo image">
+                <img class="brand__img" src="/img/logo2.png" alt="logo image">
+                <img class="brand__img" src="/img/logo3.png" alt="logo image">
+                <img class="brand__img" src="/img/logo4.png" alt="logo image">
+
+            </div>
+        </section>
+    </main>
+    <!--=========================== FOOTER ==============================!-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div>
+                <a href="#" class="footer__logo">
+                    Shop.
+                </a>
+                <p class="footer__description">
+                    Committed to bringing you the <br>
+                    best clothing from popular <br>
+                    brands.
+                </p>
+            </div>
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">
+                        Company
+                    </h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">
+                                Shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Category
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Contact info</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Blog
+                    </h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Events</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Popular news</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Recent news</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Office
+                    </h3>
+                    <p class="footer__information">
+                        Monday - Saturday <br>
+                        9AM - 10PM
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">
+                        Contact us
+                    </h3>
+
+                    <ul class="footer__social">
+                        <a href="https://facebook.com" target="_blank" class="footer__social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="footer__social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" class="footer__social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"/></svg>
+                        </a> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__info container">
+            <span class="footer__copy">
+                &#169; Nahid. All rights reserved
+            </span>
+            <a href="#" class="footer__privacy">
+                Terms & Conditions
+            </a>
+        </div>  
+
+    </footer>
+    <!--=========================== SCROLL UP ==============================!-->
+    <div class="scrollup" id="scroll-up">
+        <svg class="arrow__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/></svg>
+    </div>
+    <script src="/scrollreveal.min.js"></script>
+</body>
+</html>
