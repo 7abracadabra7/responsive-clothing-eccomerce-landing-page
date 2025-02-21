@@ -488,6 +488,7 @@ body.dark-theme {
     padding: 16px;
     margin-top: -16px;
     bottom: 20%;
+    cursor: pointer;
    
 }
 .prev {
@@ -505,6 +506,7 @@ body.dark-theme {
 }
 .slideshow-container {
     position: relative;
+    
 }
 
 .other-products {

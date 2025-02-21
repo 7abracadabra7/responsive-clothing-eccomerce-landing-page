@@ -38,7 +38,7 @@ function classSwitcher(){
 
 function updatePoints() {
     otherProducts.textContent = "";
-        for(let i = 0 ; i<points.length -2 ; i++){
+        for(let i = 0 ; i<points.length -1 ; i++){
             let myImg = document.createElement("img");
             myImg.className = "not-active-img";
             myImg.src = points[i].currentSrc;
